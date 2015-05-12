@@ -23,3 +23,42 @@ controller('${1:name}', function($2) {
 	$0
 });
 endsnippet
+
+snippet amod "angular module" i
+angular.module('${1}', [${2}])
+$3
+endsnippet
+
+snippet acon "angular controller" b
+.controller('${1:name}', [${2}function (${3}) {
+    ${4}
+}])
+endsnippet
+
+snippet adir "angular directive" b
+.directive('${1}', function () {
+  return {
+    restrict:'EA',
+    controller:'${2}',
+    templateUrl:'${3}',
+    transclude:true,
+    replace:true,
+    scope: {
+      type: '@',
+      close: '&'
+    }
+  };
+});${5}
+endsnippet
+
+snippet alink "Angular Link Directive" b
+link: function(scope, element, attrs) {
+  ${1}
+}${2}
+endsnippet
+
+snippet afor "Angular forEach" b
+angular.forEach({$1}, function (${2}) {
+  ${3}
+}
+endsnippet
